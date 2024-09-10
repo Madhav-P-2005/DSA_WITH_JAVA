@@ -139,7 +139,7 @@ class Multidimensional
     }
 }
 
-//(kunal's logic)
+
 class Multidimensional {
 
     public static void main(String args[]) {
@@ -285,7 +285,7 @@ class ArrayListExample
 
 
 
-// Multidimensional Array List (kunal's way)
+// Multidimensional Array List (kunal's logic)
 public class MultiAL
 {
     public static void main(String[] args)
@@ -311,153 +311,5 @@ public class MultiAL
 }
 
 
-// Write a Java program to demonstrate swapping of arrays (my logic)
-class  Swap
-{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int i,j;
-        int size;
-        System.out.println("Enter the size of array");
-         size = sc.nextInt();
-
-        int[] arr1 = new int[size];
-        int[] arr2 = new int[size];
-        System.out.println("Enter the elements to array1");
-        for(i=0;i<size;i++)
-        {
-            arr1[i] = sc.nextInt();
-        }
 
 
-        System.out.println();
-
-        System.out.println("Elements of array1 before swapping ");
-        for(i=0;i<size;i++)
-        {
-                System.out.print(arr1[i]+" ");
-        }
-
-        System.out.println();
-
-        System.out.println("Enter the elements to array2");
-        for(i=0;i<size;i++)
-        {
-            arr2[i] = sc.nextInt();
-        }
-
-
-        System.out.println("Elements of array2 before swapping ");
-        for(i=0;i<size;i++)
-        {
-            System.out.print(arr2[i]+" ");
-        }
-
-        System.out.println();
-        // logic
-         for(i=0;i<size;i++)
-         {
-                 int temp = arr1[i];
-                 arr1[i] = arr2[i];
-                 arr2[i] = temp;
-         }
-
-         // Elements of array1 after swapping
-        System.out.println("Elements of array1 after swapping ");
-        for(i=0;i<size;i++)
-        {
-            System.out.print(arr1[i]+" ");
-        }
-
-        System.out.println();
-        // Elements of array2 after swapping
-        System.out.println("Elements of array2 after swapping ");
-        for(i=0;i<size;i++)
-        {
-            System.out.print(arr2[i]+" ");
-        }
-
-    }
-}
-
-
-// Swap the elements with the array (my logic)
-class Swap
-{
-    public static void main(String[] args)
-    {
-        int size, i;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size");
-        size = sc.nextInt();
-        int[] arr = new int[size];
-
-        System.out.println("Enter the array elements");
-        for (i = 0; i < size; i++) {
-            {
-                arr[i] = sc.nextInt();
-            }
-        }
-
-        System.out.println();
-
-        System.out.println("Array elements before swapping");
-        for (i = 0; i < size; i++) {
-            {
-                System.out.println(arr[i]);
-            }
-        }
-        System.out.println();
-
-        // logic
-        for (i = 0; i < size-1; i++)
-        {
-            int temp = arr[i];
-            arr[i] = arr[i + 1];
-            arr[i + 1] = temp;
-        }
-
-
-        System.out.println("Array elements after swapping");
-        for (i = 0; i < size; i++)
-        {
-            {
-                System.out.println(arr[i]);
-            }
-        }
-    }
-}
-
-
-
-// Swapping the array elements in methods (kunal's way)
-class Swap {
-    public static void main(String agrs[])
-    {
-        int arr[] = {1,3,23,9,18};
-        swap(arr,0,4);
-        System.out.println(Arrays.toString(arr));
-    }
-
-
-    static void reverse(int[] arr)
-    {
-         int start = 0;
-         int end = arr.length-1;
-
-        while (start < end)
-        {
-            // swap
-            swap(arr, start, end);
-            start++;
-            end--;
-        }
-    }
-
-    static void swap(int[] arr,int index1,int index2)
-    {
-        int temp = arr[index1];
-        arr[index1] = arr[index2];
-        arr[index2] = temp;
-    }
-}
